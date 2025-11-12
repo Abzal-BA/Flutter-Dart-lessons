@@ -83,44 +83,55 @@ List<int> removeDuplicatesPreserveOrder(List<int> list) {
   }
   return out;
 }
-
+//===================================================================== Main function to run tests
 void main() {
+
+
+    //   A1. Sum of  1..n (for loop) 
   print('=== A1. Sum 1..n ===');
   var testsA1 = [[5, 15], [1, 1], [0, 0]];
   for (var test in testsA1) {
-    print('$${test[0]} → $${sumToN(test[0])} (expected $${test[1]})');
+    print('${test[0]} → ${sumToN(test[0])} (expected ${test[1]})');
   }
 
+    //   A2. Sum from list (one pass, without reduce)
   print('\n=== A2. Sum of list elements ===');
-  print('[1,2,3] → $${sumList([1,2,3])} (expected 6)');
-  print('[] → $${sumList([])} (expected 0)');
+  print('[1,2,3] → ${sumList([1,2,3])} (expected 6)');
+  print('[] → ${sumList([])} (expected 0)');
 
+    //   A3. Minimum and maximum (one pass, error for empty list)
   print('\n=== A3. Minimum and maximum ===');
-  print('[3,1,7] → $${minMax([3,1,7])} (expected [1,7])');
-  print('[5] → $${minMax([5])} (expected [5,5])');
+  print('[3,1,7] → ${minMax([3,1,7])} (expected [1,7])');
+  print('[5] → ${minMax([5])} (expected [5,5])');
 
+    //   A4. Count of even numbers (linear pass)
   print('\n=== A4. Count of even numbers ===');
-  print('[1,2,4,5] → $${countEven([1,2,4,5])} (expected 2)');
-  print('[] → $${countEven([])} (expected 0)');
+  print('[1,2,4,5] → ${countEven([1,2,4,5])} (expected 2)');
+  print('[] → ${countEven([])} (expected 0)');
 
+    //   A5. Reverse list (without .reversed, using indices and add)
   print('\n=== A5. Reverse list ===');
-  print('[1,2,3] → $${reverseList([1,2,3])} (expected [3,2,1])');
-  print('[] → $${reverseList([])} (expected [])');
+  print('[1,2,3] → ${reverseList([1,2,3])} (expected [3,2,1])');
+  print('[] → ${reverseList([])} (expected [])');
 
+    //   A6. Filter "non-negative"
   print('\n=== A6. Filter "non-negative" ===');
-  print('[-2,0,3] → $${filterNonNegative([-2,0,3])} (expected [0,3])');
-  print('[-1,-5] → $${filterNonNegative([-1,-5])} (expected [])');
+  print('[-2,0,3] → ${filterNonNegative([-2,0,3])} (expected [0,3])');
+  print('[-1,-5] → ${filterNonNegative([-1,-5])} (expected [])');
 
+    //   A7. Remove all occurrences of x
   print('\n=== A7. Remove all occurrences of x ===');
-  print('[1,2,2,3], x=2 → $${removeAllOccurrences([1,2,2,3], 2)} (expected [1,3])');
-  print('[2,2], x=2 → $${removeAllOccurrences([2,2], 2)} (expected [])');
+  print('[1,2,2,3], x=2 → ${removeAllOccurrences([1,2,2,3], 2)} (expected [1,3])');
+  print('[2,2], x=2 → ${removeAllOccurrences([2,2], 2)} (expected [])');
 
+    //   A8. Count of unique elements (via Set)
   print('\n=== A8. Count of unique elements ===');
-  print('[1,1,2] → $${countUnique([1,1,2])} (expected 2)');
-  print('[] → $${countUnique([])} (expected 0)');
-  print('[5,5,5] → $${countUnique([5,5,5])} (expected 1)');
+  print('[1,1,2] → ${countUnique([1,1,2])} (expected 2)');
+  print('[] → ${countUnique([])} (expected 0)');
+  print('[5,5,5] → ${countUnique([5,5,5])} (expected 1)');
 
+    //   A9. Remove duplicates, preserving order of first occurrence
   print('\n=== A9. Remove duplicates ===');
-  print('[1,2,1,3,2] → $${removeDuplicatesPreserveOrder([1,2,1,3,2])} (expected [1,2,3])');
-  print('[4,4,4] → $${removeDuplicatesPreserveOrder([4,4,4])} (expected [4])');
+  print('[1,2,1,3,2] → ${removeDuplicatesPreserveOrder([1,2,1,3,2])} (expected [1,2,3])');
+  print('[4,4,4] → ${removeDuplicatesPreserveOrder([4,4,4])} (expected [4])');
 }
